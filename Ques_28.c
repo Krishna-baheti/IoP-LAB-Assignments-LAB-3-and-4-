@@ -9,21 +9,23 @@
 
 int main()
 {
-  int n,r,sum=0,temp;    
-  printf("Enter the number : ");    
-  scanf("%d",&n);    
-  temp=n;    
-  while(n>0)    
-  {    
-     r=n%10;    
-     sum=sum+(r*r*r);    
-     n=n/10;    
-  }    
-  if(temp==sum)    
-  printf("armstrong  number \n");    
-  else 
+  printf("Enter a number \n");
+  int num,sum = 0,rem, tem;
+  scanf("%d",&num);
+  tem = num;
+  while(num > 0)
   {
-    printf("not armstrong number \n"); 
-  }   
+    rem = num % 10;
+    sum = sum + rem*rem*rem;
+    num = num/10;
+  }  
+  if(tem == sum)
+  {
+      printf("Armstrong number \n");
+  }
+else
+  {
+    printf("Not an Armstrong number \n");
+  }
 return 0;  
 }  
