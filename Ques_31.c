@@ -6,16 +6,17 @@
 */
 
 #include<stdio.h>
-#include<conio.h>
+
 int main()
 {
-    int n,sum=0;
-    printf("enter a +ve integer : "); 
-    scanf("%d",&n);
-    while(n>0)  // checks the condition
+    printf("Enter a number \n");
+    int num,sum = 0, rem;
+    scanf("%d",&num);
+    while(num > 0)
     {
-        sum=sum+n%10;   // sum + remainder
-        n=n/10;
+        rem = num % 10;
+        sum = sum + rem;
+        num = num/10;
     }
     printf("sum of individual digits of a positive integer is %d",sum); 
     return 0;
